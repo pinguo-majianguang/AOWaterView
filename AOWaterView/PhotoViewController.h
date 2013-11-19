@@ -28,6 +28,7 @@
     UIButton *likedBut;
     UIImageView *photoView;
     UIButton *shareButton;
+
 }
 
 @property (nonatomic,strong) UIView *cellContentView;
@@ -35,6 +36,7 @@
 @property (nonatomic, retain) CMSCoinView *coinView;
 
 -(id) initWithPhotoData:(NSDictionary *) newData;
+-(void)initTencent;
 -(void) getFavoriteUsers;
 
 @end

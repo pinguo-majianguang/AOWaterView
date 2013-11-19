@@ -21,6 +21,7 @@
     double rotate1;
     
 }
+@synthesize backImg;
 extern UIViewController *thisViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -58,9 +59,9 @@ extern UIViewController *thisViewController;
 }
 
 -(void)initAccelerometer{
-    UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
-    accelerometer.delegate = self;
-    accelerometer.updateInterval = 1.0/10.0;
+    self.accelerometer = [UIAccelerometer sharedAccelerometer];
+    self.accelerometer.delegate = self;
+    self.accelerometer.updateInterval = 1.0/10.0;
 }
 
 - (void) accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
@@ -70,10 +71,9 @@ extern UIViewController *thisViewController;
     
     [UIImageView beginAnimations:@"" context:NULL];
     UIImageView.animationDuration = 0.1;
-    UIImageView.animationRepeatCount = 0;
-    _backImage.frame = CGRectMake(-(acceleration.x*20)-50, (acceleration.y*20)-50, 420, 668);
-    _backImage.contentMode = UIViewContentModeScaleToFill;
-    //[UIImageView commitAnimations];
+    self.backImg.frame = CGRectMake(-(acceleration.x*20)-50, (acceleration.y*20)-50, 420, 668);
+    self.backImg.contentMode = UIViewContentModeScaleToFill;
+    [UIImageView commitAnimations];
     
 //    CGAffineTransform rotate = CGAffineTransformMakeRotation( 1.0 / (180.0+rotate1) * 3.14 );
 //    
@@ -92,10 +92,11 @@ extern UIViewController *thisViewController;
     [self.navigationController setNavigationBarHidden:YES];
     [self initAccelerometer];
     
-    _backImage = [[UIImageView alloc] initWithFrame:CGRectMake(-50, -50, 420, 668)];
+    
+    self.backImg= [[UIImageView alloc] initWithFrame:CGRectMake(-50, -50, 420, 668)];
     UIImage *img = [UIImage imageNamed:@"wallpaper.jpg"];
-    _backImage.image = img;
-    [self.view addSubview:_backImage];
+    self.backImg.image = img;
+    [self.view addSubview:self.backImg];
     //[self rotate360DegreeWithImageView:_backImage];
     //停止所有动画
     //[self.view.layer removeAllAnimates];
@@ -255,8 +256,6 @@ extern UIViewController *thisViewController;
     
     [_username resignFirstResponder];
     [_password resignFirstResponder];
-    _username.text = @"";
-    _password.text = @"";
     if(!thisViewController){
         thisViewController = [[MainViewController alloc] init];
         NSLog(@"fdfd");

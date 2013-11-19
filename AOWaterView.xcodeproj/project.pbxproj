@@ -77,17 +77,13 @@
 		1878D5321832889300270E8A /* ResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1878D5301832889300270E8A /* ResultView.xib */; };
 		1878D534183288A500270E8A /* check-mark-512.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1878D533183288A500270E8A /* check-mark-512.gif */; };
 		1878D53618328D2100270E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1878D53518328D2100270E8A /* Assets.xcassets */; };
-		18A2698D183381A00088B433 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A26987183381A00088B433 /* 0.jpg */; };
-		18A2698E183381A00088B433 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A26988183381A00088B433 /* 1.jpg */; };
-		18A2698F183381A00088B433 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A26989183381A00088B433 /* 2.jpg */; };
-		18A26990183381A00088B433 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A2698A183381A00088B433 /* 3.jpg */; };
-		18A26991183381A00088B433 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A2698B183381A00088B433 /* 4.jpg */; };
-		18A26992183381A00088B433 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A2698C183381A00088B433 /* 5.jpg */; };
 		18A297581833DEC50029B7D8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A297561833DEC50029B7D8 /* MainViewController.m */; };
 		18A297591833DEC50029B7D8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A297571833DEC50029B7D8 /* MainViewController.xib */; };
 		18A297651833DEF50029B7D8 /* AOWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2975C1833DEF50029B7D8 /* AOWaterView.m */; };
 		18A297661833DEF50029B7D8 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2975E1833DEF50029B7D8 /* Cell.m */; };
-		18F3BD141839C03A00594F92 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3BD131839C03A00594F92 /* MessageUI.framework */; };
+		18DC3AE5183B336C0057F93D /* wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DC3AE4183B336C0057F93D /* wallpaper.jpg */; };
+		18DC3AE8183B413C0057F93D /* SpotifyProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC3AE7183B413C0057F93D /* SpotifyProgressHUD.m */; };
+		18F9B84B183B6C5E008A653A /* view_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18F9B84A183B6C5E008A653A /* view_bg.jpg */; };
 		18FBBDA81838D51A000D33EC /* DDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FBBDA71838D51A000D33EC /* DDProgressView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2741BA421835AFD3001DA658 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2741BA411835AFD3001DA658 /* placeholder.jpg */; };
 		2741BA461835B288001DA658 /* oneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741BA441835B288001DA658 /* oneViewController.m */; };
@@ -201,12 +197,6 @@
 		1878D53518328D2100270E8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		189F9A851839BF0F0063B079 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessageUI.framework; sourceTree = "<group>"; };
 		189F9A861839BF0F0063B079 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
-		18A26987183381A00088B433 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
-		18A26988183381A00088B433 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		18A26989183381A00088B433 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		18A2698A183381A00088B433 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
-		18A2698B183381A00088B433 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
-		18A2698C183381A00088B433 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		18A297551833DEC50029B7D8 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		18A297561833DEC50029B7D8 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		18A297571833DEC50029B7D8 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -214,7 +204,10 @@
 		18A2975C1833DEF50029B7D8 /* AOWaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOWaterView.m; sourceTree = "<group>"; };
 		18A2975D1833DEF50029B7D8 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		18A2975E1833DEF50029B7D8 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
-		18F3BD131839C03A00594F92 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		18DC3AE4183B336C0057F93D /* wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallpaper.jpg; sourceTree = "<group>"; };
+		18DC3AE6183B413C0057F93D /* SpotifyProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotifyProgressHUD.h; sourceTree = "<group>"; };
+		18DC3AE7183B413C0057F93D /* SpotifyProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotifyProgressHUD.m; sourceTree = "<group>"; };
+		18F9B84A183B6C5E008A653A /* view_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = view_bg.jpg; sourceTree = "<group>"; };
 		18FBBDA61838D51A000D33EC /* DDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProgressView.h; sourceTree = "<group>"; };
 		18FBBDA71838D51A000D33EC /* DDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProgressView.m; sourceTree = "<group>"; };
 		2741BA411835AFD3001DA658 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
@@ -233,13 +226,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F370D41714F07C00560632 /* CoreGraphics.framework in Frameworks */,
 				274DA410183B169F00309D10 /* SDWebImage.framework in Frameworks */,
-				18F3BD141839C03A00594F92 /* MessageUI.framework in Frameworks */,
 				184D775B1833C006007D1065 /* ImageIO.framework in Frameworks */,
 				04F3713817151ABA00560632 /* QuartzCore.framework in Frameworks */,
 				04F370D01714F07C00560632 /* UIKit.framework in Frameworks */,
 				04F370D21714F07C00560632 /* Foundation.framework in Frameworks */,
-				04F370D41714F07C00560632 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +269,6 @@
 		04F370CE1714F07C00560632 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18F3BD131839C03A00594F92 /* MessageUI.framework */,
 				189F9A851839BF0F0063B079 /* MessageUI.framework */,
 				189F9A861839BF0F0063B079 /* SDWebImage.framework */,
 				186DD8591834B145001D85F7 /* MessageUI.framework */,
@@ -358,6 +349,8 @@
 		04F3713917151DC200560632 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18F9B84A183B6C5E008A653A /* view_bg.jpg */,
+				18DC3AE4183B336C0057F93D /* wallpaper.jpg */,
 				27533E47183922690042E22D /* unFavorate.jpg */,
 				27533E45183922540042E22D /* favorate.jpg */,
 				2741BA411835AFD3001DA658 /* placeholder.jpg */,
@@ -455,12 +448,6 @@
 		18A26986183381A00088B433 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				18A26987183381A00088B433 /* 0.jpg */,
-				18A26988183381A00088B433 /* 1.jpg */,
-				18A26989183381A00088B433 /* 2.jpg */,
-				18A2698A183381A00088B433 /* 3.jpg */,
-				18A2698B183381A00088B433 /* 4.jpg */,
-				18A2698C183381A00088B433 /* 5.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -483,6 +470,8 @@
 		18FBBDA51838D4B0000D33EC /* Progress */ = {
 			isa = PBXGroup;
 			children = (
+				18DC3AE6183B413C0057F93D /* SpotifyProgressHUD.h */,
+				18DC3AE7183B413C0057F93D /* SpotifyProgressHUD.m */,
 				18FBBDA61838D51A000D33EC /* DDProgressView.h */,
 				18FBBDA71838D51A000D33EC /* DDProgressView.m */,
 			);
@@ -576,18 +565,17 @@
 				186DD8DB1834BF91001D85F7 /* photo_liked.png in Resources */,
 				04F370DA1714F07C00560632 /* InfoPlist.strings in Resources */,
 				187647511830E7950023CD9F /* sync@2x.png in Resources */,
-				18A26990183381A00088B433 /* 3.jpg in Resources */,
+				18F9B84B183B6C5E008A653A /* view_bg.jpg in Resources */,
 				1878D52518327FAA00270E8A /* photo_like.png in Resources */,
 				2741BA421835AFD3001DA658 /* placeholder.jpg in Resources */,
 				1847902618334BA90038442A /* mail.png in Resources */,
 				1878D53618328D2100270E8A /* Assets.xcassets in Resources */,
 				1847902218334BA90038442A /* facebook.png in Resources */,
-				18A26991183381A00088B433 /* 4.jpg in Resources */,
-				18A26992183381A00088B433 /* 5.jpg in Resources */,
 				1847902B18334BA90038442A /* photo_library@2x.png in Resources */,
 				1876474D1830E7840023CD9F /* cloud@2x.png in Resources */,
 				04F371051714F10D00560632 /* dataList.plist in Resources */,
 				1878D5321832889300270E8A /* ResultView.xib in Resources */,
+				18DC3AE5183B336C0057F93D /* wallpaper.jpg in Resources */,
 				27533E46183922540042E22D /* favorate.jpg in Resources */,
 				1847902C18334BA90038442A /* pinterest.png in Resources */,
 				04F3713217150A4B00560632 /* MainWindow.xib in Resources */,
@@ -596,7 +584,6 @@
 				1847902318334BA90038442A /* facebook@2x.png in Resources */,
 				04F3714317151DFC00560632 /* blackArrow@2x.png in Resources */,
 				1847902D18334BA90038442A /* pinterest@2x.png in Resources */,
-				18A2698F183381A00088B433 /* 2.jpg in Resources */,
 				1847902E18334BA90038442A /* twitter.png in Resources */,
 				04F3714417151DFC00560632 /* blueArrow.png in Resources */,
 				1847901F18334BA90038442A /* dropbox@2x.png in Resources */,
@@ -609,13 +596,11 @@
 				27533E48183922690042E22D /* unFavorate.jpg in Resources */,
 				1847902018334BA90038442A /* evernote.png in Resources */,
 				04F3714617151DFC00560632 /* grayArrow.png in Resources */,
-				18A2698D183381A00088B433 /* 0.jpg in Resources */,
 				1847902F18334BA90038442A /* twitter@2x.png in Resources */,
 				1847901C18334BA90038442A /* close.png in Resources */,
 				1847902118334BA90038442A /* evernote@2x.png in Resources */,
 				2741BA471835B288001DA658 /* oneViewController.xib in Resources */,
 				1847902418334BA90038442A /* google_drive.png in Resources */,
-				18A2698E183381A00088B433 /* 1.jpg in Resources */,
 				04F3714717151DFC00560632 /* grayArrow@2x.png in Resources */,
 				2741BA4B1835B445001DA658 /* logo.png in Resources */,
 				1878D5311832889300270E8A /* profile.png in Resources */,
@@ -680,6 +665,7 @@
 				04F3710C1714F5A700560632 /* DataAccess.m in Sources */,
 				187647461830E7390023CD9F /* QBAnimationItem.m in Sources */,
 				18A297651833DEF50029B7D8 /* AOWaterView.m in Sources */,
+				18DC3AE8183B413C0057F93D /* SpotifyProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +770,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/goingta/Downloads/demo/AOWaterView,
+					/Users/apple/Downloads/git/AOWaterView,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AOWaterView/AOWaterView-Prefix.pch";
@@ -812,6 +799,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/goingta/Downloads/demo/AOWaterView,
+					/Users/apple/Downloads/git/AOWaterView,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AOWaterView/AOWaterView-Prefix.pch";

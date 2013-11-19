@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CFShareCircleView.h"
 #import "MyPhotoView.h"
+#import "SpotifyProgressHUD.h"
 
 @interface MyPhotoListView : UIViewController<MyPhotoViewClick>{
     CFShareCircleView *shareCircleView;

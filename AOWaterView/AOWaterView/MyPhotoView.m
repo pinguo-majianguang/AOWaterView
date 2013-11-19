@@ -34,7 +34,7 @@
     int imgH = [[myPhotoData objectForKey:@"h"] intValue];
     imgH = (imgH*310)/[[myPhotoData objectForKey:@"w"] intValue];
     // Initialization code
-    UIColor *bg = [UIColor colorWithRed:244/255.0f green:248/255.0f blue:249/255.0f alpha:1.0f];
+    UIColor *bg = [UIColor colorWithRed:244/255.0f green:248/255.0f blue:249/255.0f alpha:0.6f];
     UIColor *borderColor = [UIColor colorWithRed:225.0f/255.0f green:227.0f/255.0f blue:228.0f/255.0f alpha:1.0f];
     
     UIButton *photoBtn = [[UIButton alloc] init];

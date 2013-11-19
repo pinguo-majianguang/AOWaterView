@@ -25,9 +25,9 @@ extern UIViewController *thisViewController;
         
         if(hasCreatedImageView == NO){
             self.imgView1 = [[UIImageView alloc] initWithFrame:CGRectMake(2, 2, 78, 78)];
-            self.imgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(80, 2, 78, 78)];
-            self.imgView3 = [[UIImageView alloc] initWithFrame:CGRectMake(160, 2, 78, 78)];
-            self.imgView4 = [[UIImageView alloc] initWithFrame:CGRectMake(240, 2, 78, 78)];
+            self.imgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(82, 2, 78, 78)];
+            self.imgView3 = [[UIImageView alloc] initWithFrame:CGRectMake(162, 2, 78, 78)];
+            self.imgView4 = [[UIImageView alloc] initWithFrame:CGRectMake(242, 2, 76, 78)];
             
             UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapAction:)];
             UITapGestureRecognizer *singleTap2 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapAction:)];

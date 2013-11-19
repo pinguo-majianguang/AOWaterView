@@ -10,4 +10,7 @@
 
 @interface oneViewController : UIViewController<UITextFieldDelegate>
 
+@property (strong,nonatomic) UIImageView *backImg;
+@property (nonatomic) UIAccelerometer *accelerometer;
+
 @end

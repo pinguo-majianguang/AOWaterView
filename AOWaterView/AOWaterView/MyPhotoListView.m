@@ -25,9 +25,10 @@ extern UIViewController *thisViewController;
     
     scrollPanel = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
-    scrollPanel.backgroundColor = [UIColor colorWithRed:234.0f/255.0f green:234.0f/255.0f blue:234.0f/255.0f alpha:1.0f];
+    //scrollPanel.backgroundColor = [UIColor colorWithRed:234.0f/255.0f green:234.0f/255.0f blue:234.0f/255.0f alpha:1.0f];
     
     [self.view addSubview: scrollPanel];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"view_bg.jpg"]];
     
     [self getFavoriteUsers];
 }
@@ -41,6 +42,11 @@ extern UIViewController *thisViewController;
 }
 
 -(void) getFavoriteUsers{
+    SpotifyProgressHUD *progressView = [[SpotifyProgressHUD alloc] initWithFrame:CGRectMake(0, 0, 150, 150)
+                                                               withPointDiameter:16
+                                                                    withInterval:0.25];
+    progressView.center = self.view.center;
+    [self.view addSubview:progressView];
     NSString *urlStr = [NSString stringWithFormat:@"https://cloud.camera360.com/activity/picture/hot?activityId=52569bb88852d69963256a7f&limit=7"];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSString *post=@"postData";
@@ -75,6 +81,7 @@ extern UIViewController *thisViewController;
                                            scrollH = scrollH + myPhoto.frame.size.height+5;
                                        }
                                        [scrollPanel setContentSize:CGSizeMake(320, scrollH)];
+                                       [progressView removeFromSuperview];
                                    });
                                    
                                    
