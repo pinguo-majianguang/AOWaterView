@@ -8,12 +8,12 @@
 
 #import "MyPhotoView.h"
 #import "PhotoViewController.h"
+#import "MyPhotoListView.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation MyPhotoView
 
-extern UIViewController *thisViewController;
-
+@synthesize delegate;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -23,11 +23,12 @@ extern UIViewController *thisViewController;
     return self;
 }
 
-- (id)initWithPhotoData:(NSDictionary *)newData andY:(int)y{
+- (id)initWithPhotoData:(NSDictionary *)newData andY:(int)y andDelegate:(MyPhotoListView *) photoList{
     self = [super init];
     if(self){
         myPhotoData = newData;
     }
+    self.delegate = photoList;
     NSLog(@"myPhotoView init");
     int imgW = 320;
     int imgH = [[myPhotoData objectForKey:@"h"] intValue];
@@ -143,8 +144,8 @@ extern UIViewController *thisViewController;
     
     // 2、通过tag进行选择对应的操作
     if (button.tag == 1) {
-        PhotoViewController *pv = [[PhotoViewController alloc] initWithPhotoData:myPhotoData];
-        [thisViewController.navigationController pushViewController:pv animated:YES];
+        
+        [delegate myPhotoClick:myPhotoData];
     } else if(button.tag ==2) {
         //[shareCircleView show];
     }else{

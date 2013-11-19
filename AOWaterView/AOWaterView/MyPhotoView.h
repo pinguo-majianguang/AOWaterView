@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "CFShareCircleView.h"
 #import "CMSCoinView.h"
+@class MyPhotoView;
+
+@protocol MyPhotoViewClick <NSObject>
+
+@required
+-(void)myPhotoClick:(NSDictionary *)data;
+
+@end
 
 @interface MyPhotoView : UIView{
     NSDictionary *myPhotoData;
@@ -21,11 +29,15 @@
     UIImageView *photoView;
     UILabel *commentsLabel;
     CMSCoinView *coinView;
+    
+    id<MyPhotoViewClick> delegate;
 }
 
 @property int viewH;
 
-- (id)initWithPhotoData:(NSDictionary *)newData andY:(int *)y;
+@property (nonatomic,retain) id delegate;
+
+- (id)initWithPhotoData:(NSDictionary *)newData andY:(int *)y andDelegate:(NSDictionary *)photoList;
 
 
 @end

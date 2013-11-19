@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CFShareCircleView.h"
+#import "MyPhotoView.h"
 
-@interface MyPhotoListView : UIViewController{
+@interface MyPhotoListView : UIViewController<MyPhotoViewClick>{
     CFShareCircleView *shareCircleView;
     UIScrollView *scrollPanel;
 }
