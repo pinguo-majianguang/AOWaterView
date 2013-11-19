@@ -8,6 +8,7 @@
 
 #import "MyPhotoListView.h"
 #import "MyPhotoView.h"
+#import "PhotoViewController.h"
 
 @implementation MyPhotoListView
 
@@ -69,7 +70,7 @@ extern UIViewController *thisViewController;
                                        int scrollH = 0;
                                        int len = list.count;
                                        for(int i=0;i<len;i++){
-                                           MyPhotoView *myPhoto = [[MyPhotoView alloc] initWithPhotoData:[list objectAtIndex:i] andY:scrollH];
+                                           MyPhotoView *myPhoto = [[MyPhotoView alloc] initWithPhotoData:[list objectAtIndex:i] andY:scrollH andDelegate:self];
                                            [scrollPanel addSubview:myPhoto];
                                            scrollH = scrollH + myPhoto.frame.size.height+5;
                                        }
@@ -80,6 +81,11 @@ extern UIViewController *thisViewController;
                                }
                            }];
     
+}
+
+-(void)myPhotoClick:(NSDictionary *)data{
+    PhotoViewController *pv = [[PhotoViewController alloc] initWithPhotoData:data];
+    [thisViewController.navigationController pushViewController:pv animated:YES];
 }
 
 /*
