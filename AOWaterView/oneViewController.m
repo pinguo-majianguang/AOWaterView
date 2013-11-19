@@ -107,10 +107,7 @@ extern UIViewController *thisViewController;
 //    
 //    [backImage addSubview:logoView];
     
-//    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapAction)];
-//    [_backImage addGestureRecognizer:singleTap];
-//    
-//    _backImage.userInteractionEnabled = YES;
+
 
     
     
@@ -166,6 +163,9 @@ extern UIViewController *thisViewController;
     startContentView.backgroundColor = [UIColor colorWithRed:0.38 green:0.57 blue:0.84 alpha:1];
     startContentView.alpha = 0.8;
     
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapAction)];
+    [startContentView addGestureRecognizer:singleTap];
+    startContentView.userInteractionEnabled = YES;
     
     [self.view addSubview:_username];
     [self.view addSubview:_password];
