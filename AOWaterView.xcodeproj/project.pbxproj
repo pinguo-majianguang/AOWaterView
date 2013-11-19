@@ -88,15 +88,16 @@
 		18A297651833DEF50029B7D8 /* AOWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2975C1833DEF50029B7D8 /* AOWaterView.m */; };
 		18A297661833DEF50029B7D8 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2975E1833DEF50029B7D8 /* Cell.m */; };
 		18F3BD141839C03A00594F92 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3BD131839C03A00594F92 /* MessageUI.framework */; };
-		18F3BD151839C06600594F92 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189F9A861839BF0F0063B079 /* SDWebImage.framework */; };
 		18FBBDA81838D51A000D33EC /* DDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FBBDA71838D51A000D33EC /* DDProgressView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2741BA421835AFD3001DA658 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2741BA411835AFD3001DA658 /* placeholder.jpg */; };
 		2741BA461835B288001DA658 /* oneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741BA441835B288001DA658 /* oneViewController.m */; };
 		2741BA471835B288001DA658 /* oneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2741BA451835B288001DA658 /* oneViewController.xib */; };
 		2741BA491835B437001DA658 /* 23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2741BA481835B437001DA658 /* 23.jpg */; };
 		2741BA4B1835B445001DA658 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2741BA4A1835B445001DA658 /* logo.png */; };
+		274DA410183B169F00309D10 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189F9A861839BF0F0063B079 /* SDWebImage.framework */; };
 		27533E46183922540042E22D /* favorate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27533E45183922540042E22D /* favorate.jpg */; };
 		27533E48183922690042E22D /* unFavorate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27533E47183922690042E22D /* unFavorate.jpg */; };
+		27ABD742183B20FF001087B2 /* Helvetica-UL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27ABD741183B20FF001087B2 /* Helvetica-UL.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +225,7 @@
 		2741BA4A1835B445001DA658 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		27533E45183922540042E22D /* favorate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = favorate.jpg; sourceTree = "<group>"; };
 		27533E47183922690042E22D /* unFavorate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unFavorate.jpg; sourceTree = "<group>"; };
+		27ABD741183B20FF001087B2 /* Helvetica-UL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Helvetica-UL.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,12 +233,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274DA410183B169F00309D10 /* SDWebImage.framework in Frameworks */,
 				18F3BD141839C03A00594F92 /* MessageUI.framework in Frameworks */,
 				184D775B1833C006007D1065 /* ImageIO.framework in Frameworks */,
 				04F3713817151ABA00560632 /* QuartzCore.framework in Frameworks */,
 				04F370D01714F07C00560632 /* UIKit.framework in Frameworks */,
 				04F370D21714F07C00560632 /* Foundation.framework in Frameworks */,
-				18F3BD151839C06600594F92 /* SDWebImage.framework in Frameworks */,
 				04F370D41714F07C00560632 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +294,7 @@
 		04F370D51714F07C00560632 /* AOWaterView */ = {
 			isa = PBXGroup;
 			children = (
+				27ABD740183B20FF001087B2 /* font */,
 				18FBBDA51838D4B0000D33EC /* Progress */,
 				18A2975A1833DEF50029B7D8 /* AOWaterView */,
 				1847900118334B840038442A /* shareCenter */,
@@ -486,6 +489,14 @@
 			name = Progress;
 			sourceTree = "<group>";
 		};
+		27ABD740183B20FF001087B2 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				27ABD741183B20FF001087B2 /* Helvetica-UL.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -560,6 +571,7 @@
 				1847901D18334BA90038442A /* close@2x.png in Resources */,
 				1878D534183288A500270E8A /* check-mark-512.gif in Resources */,
 				1847902818334BA90038442A /* more.png in Resources */,
+				27ABD742183B20FF001087B2 /* Helvetica-UL.ttf in Resources */,
 				1878D5271832805200270E8A /* photo_share.png in Resources */,
 				186DD8DB1834BF91001D85F7 /* photo_liked.png in Resources */,
 				04F370DA1714F07C00560632 /* InfoPlist.strings in Resources */,
@@ -769,7 +781,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Jia (RFD9N5KY7A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Jia (RFD9N5KY7A)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/goingta/Downloads/demo/AOWaterView,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AOWaterView/AOWaterView-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -794,7 +809,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yang Jia (RFD9N5KY7A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yang Jia (RFD9N5KY7A)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/goingta/Downloads/demo/AOWaterView,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AOWaterView/AOWaterView-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
