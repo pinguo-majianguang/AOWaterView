@@ -84,6 +84,7 @@
 		18DC3AE5183B336C0057F93D /* wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DC3AE4183B336C0057F93D /* wallpaper.jpg */; };
 		18DC3AE8183B413C0057F93D /* SpotifyProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC3AE7183B413C0057F93D /* SpotifyProgressHUD.m */; };
 		18F9B84B183B6C5E008A653A /* view_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18F9B84A183B6C5E008A653A /* view_bg.jpg */; };
+		18F9B85B183BA5F4008A653A /* photoView_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18F9B85A183BA5F4008A653A /* photoView_bg.jpg */; };
 		18FBBDA81838D51A000D33EC /* DDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FBBDA71838D51A000D33EC /* DDProgressView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2741BA421835AFD3001DA658 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2741BA411835AFD3001DA658 /* placeholder.jpg */; };
 		2741BA461835B288001DA658 /* oneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741BA441835B288001DA658 /* oneViewController.m */; };
@@ -208,6 +209,7 @@
 		18DC3AE6183B413C0057F93D /* SpotifyProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotifyProgressHUD.h; sourceTree = "<group>"; };
 		18DC3AE7183B413C0057F93D /* SpotifyProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotifyProgressHUD.m; sourceTree = "<group>"; };
 		18F9B84A183B6C5E008A653A /* view_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = view_bg.jpg; sourceTree = "<group>"; };
+		18F9B85A183BA5F4008A653A /* photoView_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photoView_bg.jpg; sourceTree = "<group>"; };
 		18FBBDA61838D51A000D33EC /* DDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProgressView.h; sourceTree = "<group>"; };
 		18FBBDA71838D51A000D33EC /* DDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProgressView.m; sourceTree = "<group>"; };
 		2741BA411835AFD3001DA658 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 		04F3713917151DC200560632 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18F9B85A183BA5F4008A653A /* photoView_bg.jpg */,
 				18F9B84A183B6C5E008A653A /* view_bg.jpg */,
 				18DC3AE4183B336C0057F93D /* wallpaper.jpg */,
 				27533E47183922690042E22D /* unFavorate.jpg */,
@@ -604,6 +607,7 @@
 				04F3714717151DFC00560632 /* grayArrow@2x.png in Resources */,
 				2741BA4B1835B445001DA658 /* logo.png in Resources */,
 				1878D5311832889300270E8A /* profile.png in Resources */,
+				18F9B85B183BA5F4008A653A /* photoView_bg.jpg in Resources */,
 				1847901E18334BA90038442A /* dropbox.png in Resources */,
 				187647471830E7390023CD9F /* QBAnimationSequence-Info.plist in Resources */,
 				04F3714817151DFC00560632 /* whiteArrow.png in Resources */,

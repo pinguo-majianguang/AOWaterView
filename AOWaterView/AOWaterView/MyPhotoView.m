@@ -85,6 +85,7 @@
     [self addSubview:line2];
     [self addSubview:myPhotoStatusLabel];
     
+    self.alpha = 0.3f;
     //[self getFavoriteUsers];
     
     return self;
@@ -158,6 +159,7 @@
          [thisViewController.navigationController pushViewController:self.viewController animated:YES];*/
     }
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -73,15 +73,44 @@ extern UIViewController *thisViewController;
                                    
                                    dispatch_queue_t queue = dispatch_get_main_queue();
                                    dispatch_async(queue, ^{
+                                       
+                                       [UIView beginAnimations:nil context:nil];       //动画开始
+                                       [UIView setAnimationDuration:0.5];
+//                                       [UIView animateWithDuration:1
+//                                                             delay:0.5
+//                                                           options:UIViewAnimationCurveLinear //设置动画类型
+//                                                        animations:^{
+//                                                            //开始动画
+//                                   
+//                                                        }
+//                                                        completion:^(BOOL finished){
+//                                                            int scrollH = 0;
+//                                                            int len = list.count;
+//                                                            for(int i=0;i<len;i++){
+//                                                                MyPhotoView *myPhoto = [[MyPhotoView alloc] initWithPhotoData:[list objectAtIndex:i] andY:scrollH andDelegate:self];
+//                                                                
+//                                                                [scrollPanel addSubview:myPhoto];
+//                                                                scrollH = scrollH + myPhoto.frame.size.height+5;
+//                                                                [self imageViewAnimation:myPhoto];
+//                                                            }
+//                                                            [scrollPanel setContentSize:CGSizeMake(320, scrollH)];
+//                                                        }];
+                                       
+                                       progressView.alpha = 0.0f;
+                                       
+                                       [UIView commitAnimations];
                                        int scrollH = 0;
                                        int len = list.count;
                                        for(int i=0;i<len;i++){
                                            MyPhotoView *myPhoto = [[MyPhotoView alloc] initWithPhotoData:[list objectAtIndex:i] andY:scrollH andDelegate:self];
+                                           
                                            [scrollPanel addSubview:myPhoto];
                                            scrollH = scrollH + myPhoto.frame.size.height+5;
+                                           [self imageViewAnimation:myPhoto];
                                        }
                                        [scrollPanel setContentSize:CGSizeMake(320, scrollH)];
-                                       [progressView removeFromSuperview];
+                                       //[progressView removeFromSuperview];
+                                       //[self EaseInOut:progressView];
                                    });
                                    
                                    
@@ -93,6 +122,53 @@ extern UIViewController *thisViewController;
 -(void)myPhotoClick:(NSDictionary *)data{
     PhotoViewController *pv = [[PhotoViewController alloc] initWithPhotoData:data];
     [thisViewController.navigationController pushViewController:pv animated:YES];
+}
+- (void)imageViewAnimation:(UIView *)myView
+{
+    
+    
+    UIView *mw = myView;
+    
+    
+    [UIView beginAnimations:nil context:nil];       //动画开始
+    [UIView setAnimationDuration:0.8];
+    //    [UIView animateWithDuration:1
+    //                          delay:0.0
+    //                        options:UIViewAnimationCurveLinear //设置动画类型
+    //                     animations:^{
+    //                         //开始动画
+    //
+    //                     }
+    //                     completion:^(BOOL finished){
+    //                         // 动画结束时的处理
+    //                     }];
+    
+    mw.alpha = 1.0f;
+    
+    [UIView commitAnimations];
+    
+}
+
+-(void)EaseInOut:(UIView *)myView{
+    UIView *mw = myView;
+    
+    
+    [UIView beginAnimations:nil context:nil];       //动画开始
+    [UIView setAnimationDuration:0.5];
+//        [UIView animateWithDuration:1
+//                              delay:0.0
+//                            options:UIViewAnimationCurveLinear //设置动画类型
+//                         animations:^{
+//                             //开始动画
+//    
+//                         }
+//                         completion:^(BOOL finished){
+//                             // 动画结束时的处理
+//                         }];
+    
+    mw.alpha = 0.0f;
+    
+    [UIView commitAnimations];
 }
 
 /*

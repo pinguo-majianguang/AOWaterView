@@ -50,7 +50,8 @@ extern UIViewController *thisViewController;
     _cellContentView.layer.borderColor = [borderColor CGColor];
     
     //photoView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 92, imgW-20, imgH)];
-    photoView = [[UIImageView alloc] initWithFrame:CGRectMake(5+(imgW-20)/4, 92+(imgH/4), (imgW-20)/2, imgH/2)];
+    photoView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 92, imgW-20, imgH)];
+    photoView.alpha = 0.2f;
     
     //[photoView setBackgroundColor:[UIColor redColor]];
     
@@ -155,7 +156,7 @@ extern UIViewController *thisViewController;
     
     scrollPanel = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0,imgW, self.view.frame.size.height)];
     
-    scrollPanel.backgroundColor = [UIColor colorWithRed:234.0f/255.0f green:234.0f/255.0f blue:234.0f/255.0f alpha:1.0f];
+    //scrollPanel.backgroundColor = [UIColor colorWithRed:234.0f/255.0f green:234.0f/255.0f blue:234.0f/255.0f alpha:1.0f];
     
     [scrollPanel setContentSize:CGSizeMake(imgW, imgH)];
     
@@ -164,7 +165,7 @@ extern UIViewController *thisViewController;
     [self.view addSubview: scrollPanel];
     
     [self getFavoriteUsers];
-    //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"view_bg.jpg"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"photoView_bg.jpg"]];
     return self;
 }
 
@@ -179,27 +180,33 @@ extern UIViewController *thisViewController;
 
 -(void)setPhotoImage:(int) imgH{
     
-    DDProgressView *progressView = [[DDProgressView alloc] initWithFrame: CGRectMake(20.0f, imgH/2, self.view.bounds.size.width-40.0f, 0.0f)] ;
+    DDProgressView *progressView = [[DDProgressView alloc] initWithFrame: CGRectMake(20.0f, imgH/2+40, self.view.bounds.size.width-40.0f, 0.0f)] ;
 	[progressView setOuterColor: [UIColor grayColor]] ;
 	[progressView setInnerColor: [UIColor lightGrayColor]] ;
 	[_cellContentView addSubview: progressView] ;
-    
+//    
+//    SpotifyProgressHUD *progressView = [[SpotifyProgressHUD alloc] initWithFrame:CGRectMake(0, 0, 150, 150)
+//                                                               withPointDiameter:16
+//                                                                    withInterval:0.25];
+//    progressView.center = self.view.center;
+//    [self.view addSubview:progressView];
 
     NSURL *url = [NSURL URLWithString:[[NSString stringWithFormat:@"http://cloud-activity.qiniudn.com/%@",(NSString *)[photoData objectForKey:@"key"]] stringByAppendingString:[NSString stringWithFormat:@"?imageView/2/w/300/h/%d",([[photoData objectForKey:@"h"] intValue]*300)/[[photoData objectForKey:@"w"] intValue]]]];
     
-    /*[photoView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder.jpeg"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
-        NSLog(@"photo load completed");
-        [progressView removeFromSuperview];
-        
-        [self imageViewAnimation:image];
-    }];*/
-    
     [photoView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder.jpeg"] options:0 progress:^(NSUInteger receivedSize, long long expectedSize) {
-        [progressView setProgress:receivedSize/expectedSize];
+        
+        
+            [progressView setProgress:(float)receivedSize/(float)expectedSize];
+        
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
         NSLog(@"photo load completed");
         [progressView removeFromSuperview];
+//        [UIView beginAnimations:nil context:nil];       //动画开始
+//        [UIView setAnimationDuration:0.5];
+//        
+//        progressView.alpha = 0.0f;
         
+        [UIView commitAnimations];
         [self imageViewAnimation:image];
     }];
 }
@@ -340,29 +347,21 @@ extern UIViewController *thisViewController;
  
     UIImageView *imageView = photoView;
     
-    CGRect frame = [imageView frame];
-
-    frame.size.width = image.size.width;//imageFirScreen.size.width is 310.000000
-    frame.size.height = image.size.height;//imageFirScreen.size.height is 568.000000
-    frame.origin.x = 5;
-    frame.origin.y = 92;
     
     [UIView beginAnimations:nil context:nil];       //动画开始
-    //[UIView setAnimationDuration:0.5];
-    [UIView animateWithDuration:1
-                          delay:0.0
-                        options:UIViewAnimationCurveLinear //设置动画类型
-                     animations:^{
-                         //开始动画
-                         
-                     }
-                     completion:^(BOOL finished){
-                         // 动画结束时的处理
-                     }];
+    [UIView setAnimationDuration:1];
+//    [UIView animateWithDuration:1
+//                          delay:0.0
+//                        options:UIViewAnimationCurveLinear //设置动画类型
+//                     animations:^{
+//                         //开始动画
+//                         
+//                     }
+//                     completion:^(BOOL finished){
+//                         // 动画结束时的处理
+//                     }];
 
-    
-    [imageView setImage:image];
-    [imageView setFrame:frame];
+    imageView.alpha = 1.0f;
     
     [UIView commitAnimations];
 
